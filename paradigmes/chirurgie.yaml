@@ -1,0 +1,117 @@
+# Fiche paradigme — Normes chirurgicales
+# Usage : injectée dans le prompt du classifieur. Chaque thèse porte
+# ses critères de réfutation, ses sauvetages ad hoc typiques et des
+# anomalies réelles servant d'exemples (few-shot).
+# Références citées de mémoire : vérifier avant usage comme vérité terrain.
+
+domaine: chirurgie
+version: 0.1
+paradigme_resume: >
+  Une lésion anatomique identifiée et corrigée entraîne l'amélioration du patient ;
+  moins de trauma opératoire = meilleurs résultats ; la chirurgie est le traitement
+  par défaut de nombreuses pathologies ; standardiser les processus améliore les
+  résultats partout ; les recommandations traduisent les preuves et la pratique suit.
+
+theses:
+
+  - id: T1
+    these: "La correction d'une lésion visible explique l'amélioration du patient (rationnel mécanistique suffisant)."
+    statut: dominante, fragilisée
+    refutation:
+      - "Essai contre chirurgie simulée (sham) sans différence cliniquement significative."
+      - "Amélioration comparable dans le bras placebo et le bras opéré."
+    sauvetages_ad_hoc:
+      - "Mauvaise sélection des patients."
+      - "Chirurgiens de l'essai pas assez experts."
+      - "Essais sham non généralisables / non éthiques."
+      - "Mauvais critère de jugement."
+    anomalies_connues:
+      - "Méniscectomie arthroscopique pour lésion dégénérative : pas mieux que sham (FIDESYS/FIDELITY, Sihvonen, NEJM 2013)."
+      - "Débridement arthroscopique dans l'arthrose du genou : pas mieux que sham (Moseley, NEJM 2002)."
+      - "Décompression sous-acromiale : pas de bénéfice cliniquement pertinent vs arthroscopie seule (CSAW, Lancet 2018 ; FIMPACT, BMJ 2018)."
+      - "Vertébroplastie : pas mieux que sham (Buchbinder et Kallmes, NEJM 2009)."
+      - "Angioplastie dans l'angor stable : pas de différence significative vs placebo sur l'effort (ORBITA, Lancet 2018)."
+      - "Revue des essais sham : dans environ la moitié, l'effet de la chirurgie ne diffère pas du placebo (Wartolowska, BMJ 2014)."
+
+  - id: T2
+    these: "Le mini-invasif (cœlioscopie, robot) est au moins équivalent et généralement supérieur à l'ouvert."
+    statut: dominante
+    refutation:
+      - "Essai randomisé montrant une survie ou des résultats inférieurs du mini-invasif."
+      - "Diffusion massive d'une technique sans supériorité démontrée."
+    sauvetages_ad_hoc:
+      - "Courbe d'apprentissage non atteinte."
+      - "Ancienne génération de matériel."
+      - "Bénéfices non mesurés (confort, durée de séjour)."
+    anomalies_connues:
+      - "Hystérectomie radicale mini-invasive pour cancer du col : survie inférieure à l'ouvert (LACC, Ramirez, NEJM 2018)."
+      - "Prostatectomie robotique vs ouverte : résultats fonctionnels similaires à court terme (Yaxley, Lancet 2016), malgré une diffusion fondée sur une supériorité présumée."
+
+  - id: T3
+    these: "Certaines pathologies aiguës relèvent par défaut de la chirurgie."
+    statut: contestée
+    refutation:
+      - "Traitement non chirurgical non inférieur sur les critères patients."
+    sauvetages_ad_hoc:
+      - "Taux de récidive à long terme non pris en compte."
+      - "Sous-groupes compliqués exclus."
+    anomalies_connues:
+      - "Appendicite non compliquée : antibiotiques non inférieurs à l'appendicectomie sur l'état de santé à 30 jours (CODA, NEJM 2020 ; APPAC, JAMA 2015)."
+
+  - id: T4
+    these: "La standardisation des processus (checklists, protocoles) améliore les résultats et se transpose d'un contexte à l'autre."
+    statut: dominante
+    note_croisee: "Lien direct avec la littérature agile et le voyage des méthodes : même question de transposabilité d'une pratique hors de son contexte d'origine."
+    refutation:
+      - "Généralisation obligatoire sans effet mesurable alors que l'étude pilote en montrait un."
+    sauvetages_ad_hoc:
+      - "Mauvaise implémentation / adhésion de façade."
+      - "Effet plafond dans les systèmes déjà performants."
+    anomalies_connues:
+      - "Checklist de sécurité OMS : forte baisse de mortalité dans l'étude pilote (Haynes, NEJM 2009), pas de baisse significative après adoption obligatoire en Ontario (Urbach, NEJM 2014)."
+
+  - id: T5
+    these: "Les règles périopératoires traditionnelles (jeûne prolongé, drains, sonde nasogastrique, alitement) protègent le patient."
+    statut: renversée (shift achevé)
+    usage: "Calibration : exemple d'anomalies accumulées ayant abouti à un nouveau paradigme (réhabilitation améliorée, ERAS). Sert à reconnaître la forme d'une révolution terminée."
+    anomalies_connues:
+      - "Programmes ERAS : réduction des complications et de la durée de séjour en abandonnant ces règles."
+
+  - id: T6
+    these: "Le volume d'activité et l'expérience du chirurgien améliorent les résultats."
+    statut: dominante, solide
+    usage: "Contrôle négatif : thèse robuste. Le classifieur ne doit PAS y signaler d'anomalie sans contradiction empirique nette. Mesure le taux de faux positifs."
+
+  - id: T7
+    these: "Les recommandations reflètent les preuves et la pratique suit les recommandations."
+    statut: dominante, fragilisée
+    refutation:
+      - "Persistance de pratiques après essais négatifs et recommandations contraires."
+      - "Recommandations fondées principalement sur consensus d'experts dans un domaine où des essais existent."
+    anomalies_connues:
+      - "Littérature des « medical reversals » : 396 pratiques renversées identifiées dans trois grandes revues (Herrera-Perez et al., eLife 2019) ; travaux antérieurs de Prasad et Cifu."
+      - "Recommandation forte contre l'arthroscopie dans la pathologie dégénérative du genou (BMJ Rapid Recommendations, 2017), alors que la pratique décroît lentement."
+
+types_anomalie:
+  contradiction: "Résultat empirique qui contredit une thèse."
+  cas_inexplique: "Observation que le paradigme ne sait pas expliquer."
+  sauvetage_ad_hoc: "Le domaine explique un échec sans réviser la thèse."
+  importation: "Pratique d'un autre domaine qui marche alors que le paradigme dit qu'elle ne devrait pas."
+  diffusion_sans_preuve: "Adoption massive d'une pratique sans démonstration de supériorité."
+
+sources:
+  - "PubMed (E-utilities) — filtres : randomized controlled trial, sham, placebo-controlled, noninferiority"
+  - "Cochrane Library — revues systématiques"
+  - "NEJM, Lancet, BMJ, JAMA — sommaires (RSS)"
+  - "HAS, NICE — mises à jour de recommandations"
+  - "OpenAlex — suivi des citations des anomalies connues (qui les cite, qui les conteste)"
+
+sortie_attendue:
+  format: |
+    item: <titre + DOI>
+    these: <T1..T7 | AUCUNE>
+    type: <types_anomalie>
+    score: <0-5>
+    preuve: <passage cité>
+    sauvetage_detecte: <oui/non + citation>
+  regle: "Si aucune thèse n'est touchée : RIEN. Ne jamais intégrer une anomalie au consensus pour la neutraliser."

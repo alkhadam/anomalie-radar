@@ -1,0 +1,27 @@
+# Secrets : ne jamais commiter
+.env
+.env.*
+*.pem
+*.key
+*.p12
+secrets/
+credentials*.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Node
+node_modules/
+dist/
+.next/
+
+# Divers
+.DS_Store
+*.log
