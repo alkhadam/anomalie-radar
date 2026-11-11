@@ -1,3 +1,10 @@
+[project]
+name = "anomalie-radar"
+version = "0.1.0"
+description = "Radar d'anomalies par rapport à un paradigme scientifique"
+requires-python = ">=3.11"
+dependencies = ["pyyaml>=6", "defusedxml>=0.7"]
+
 [tool.pytest.ini_options]
 pythonpath = ["."]
 testpaths = ["tests"]
