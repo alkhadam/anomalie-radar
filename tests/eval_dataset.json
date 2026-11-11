@@ -1,0 +1,149 @@
+{
+  "description": "Jeu d'évaluation v0 : anomalies connues de la fiche chirurgie et contrôles négatifs T6. Réponses LLM figées, aucun appel réseau.",
+  "cas": [
+    {
+      "item": {
+        "titre": "Arthroscopic partial meniscectomy versus sham surgery for a degenerative meniscal tear",
+        "doi": "10.1056/NEJMoa1305189",
+        "resume": "Dans un essai randomisé contrôlé contre chirurgie simulée, la méniscectomie arthroscopique n'a pas fait mieux que le sham sur la douleur et la fonction à 12 mois chez des patients porteurs d'une lésion méniscale dégénérative."
+      },
+      "attendu": "T1",
+      "reponse_llm": "item: (voir item)\nthese: T1\ntype: contradiction\nscore: 5\npreuve: la méniscectomie arthroscopique n'a pas fait mieux que le sham\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "A controlled trial of arthroscopic surgery for osteoarthritis of the knee",
+        "doi": "10.1056/NEJMoa013259",
+        "resume": "Le débridement arthroscopique n'a pas été supérieur au placebo chirurgical pour la douleur et la fonction dans l'arthrose du genou."
+      },
+      "attendu": "T1",
+      "reponse_llm": "item: (voir item)\nthese: T1\ntype: contradiction\nscore: 5\npreuve: n'a pas été supérieur au placebo chirurgical\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "Subacromial decompression versus diagnostic arthroscopy for shoulder impingement (CSAW)",
+        "doi": "10.1016/S0140-6736(17)33101-3",
+        "resume": "La décompression sous-acromiale n'a apporté aucun bénéfice cliniquement pertinent par rapport à l'arthroscopie seule dans le conflit sous-acromial."
+      },
+      "attendu": "T1",
+      "reponse_llm": "item: (voir item)\nthese: T1\ntype: contradiction\nscore: 4\npreuve: aucun bénéfice cliniquement pertinent\nsauvetage_detecte: oui — bénéfices non mesurés invoqués"
+    },
+    {
+      "item": {
+        "titre": "A randomized trial of vertebroplasty for osteoporotic spinal fractures",
+        "doi": "10.1056/NEJMoa0900563",
+        "resume": "La vertébroplastie n'a pas réduit la douleur plus que la procédure sham chez les patients avec fracture vertébrale ostéoporotique."
+      },
+      "attendu": "T1",
+      "reponse_llm": "item: (voir item)\nthese: T1\ntype: contradiction\nscore: 5\npreuve: n'a pas réduit la douleur plus que la procédure sham\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "Percutaneous coronary intervention for stable angina (ORBITA)",
+        "doi": "10.1016/S0140-6736(17)32714-9",
+        "resume": "Chez des patients avec angor stable, l'angioplastie n'a pas augmenté significativement le temps d'exercice par rapport au placebo."
+      },
+      "attendu": "T1",
+      "reponse_llm": "item: (voir item)\nthese: T1\ntype: contradiction\nscore: 4\npreuve: n'a pas augmenté significativement le temps d'exercice\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "A systematic review of sham-controlled surgical trials",
+        "doi": "10.1136/bmj.g3253",
+        "resume": "Dans environ la moitié des essais contrôlés contre sham, l'effet de la chirurgie ne diffère pas de celui du placebo."
+      },
+      "attendu": "T1",
+      "reponse_llm": "item: (voir item)\nthese: T1\ntype: contradiction\nscore: 4\npreuve: l'effet de la chirurgie ne diffère pas de celui du placebo\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "Minimally invasive versus abdominal radical hysterectomy for cervical cancer (LACC)",
+        "doi": "10.1056/NEJMoa1806395",
+        "resume": "Dans cet essai randomisé, l'hystérectomie radicale mini-invasive a été associée à une survie sans maladie inférieure à la chirurgie ouverte."
+      },
+      "attendu": "T2",
+      "reponse_llm": "item: (voir item)\nthese: T2\ntype: contradiction\nscore: 5\npreuve: survie sans maladie inférieure à la chirurgie ouverte\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "Robot-assisted laparoscopic prostatectomy versus open radical retropubic prostatectomy",
+        "doi": "10.1016/S0140-6736(16)30521-6",
+        "resume": "La prostatectomie robotique n'a pas montré de supériorité fonctionnelle à court terme par rapport à la prostatectomie ouverte, malgré une diffusion large."
+      },
+      "attendu": "T2",
+      "reponse_llm": "item: (voir item)\nthese: T2\ntype: diffusion_sans_preuve\nscore: 4\npreuve: n'a pas montré de supériorité fonctionnelle\nsauvetage_detecte: oui — courbe d'apprentissage invoquée"
+    },
+    {
+      "item": {
+        "titre": "Antibiotics versus appendectomy for uncomplicated appendicitis (CODA)",
+        "doi": "10.1056/NEJMoa2014320",
+        "resume": "Chez des patients avec appendicite non compliquée, les antibiotiques n'ont pas été inférieurs à l'appendicectomie sur l'état de santé à 30 jours."
+      },
+      "attendu": "T3",
+      "reponse_llm": "item: (voir item)\nthese: T3\ntype: contradiction\nscore: 4\npreuve: les antibiotiques n'ont pas été inférieurs à l'appendicectomie\nsauvetage_detecte: oui — récidive à long terme invoquée"
+    },
+    {
+      "item": {
+        "titre": "The WHO surgical safety checklist in Ontario",
+        "doi": "10.1056/NEJMsa1402682",
+        "resume": "Après l'adoption obligatoire de la checklist de sécurité en Ontario, aucune baisse significative de la mortalité opératoire n'a été observée, contrairement à l'étude pilote."
+      },
+      "attendu": "T4",
+      "reponse_llm": "item: (voir item)\nthese: T4\ntype: contradiction\nscore: 4\npreuve: aucune baisse significative de la mortalité opératoire\nsauvetage_detecte: oui — adhésion de façade invoquée"
+    },
+    {
+      "item": {
+        "titre": "Enhanced recovery after surgery (ERAS) programs",
+        "doi": "10.1007/s00268-018-4846-9",
+        "resume": "Les programmes ERAS réduisent les complications et la durée de séjour tout en abandonnant le jeûne prolongé, les drains et la sonde nasogastrique."
+      },
+      "attendu": "T5",
+      "reponse_llm": "item: (voir item)\nthese: T5\ntype: contradiction\nscore: 4\npreuve: réduisent les complications et la durée de séjour\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "Medical reversals in clinical research",
+        "doi": "10.7554/eLife.45183",
+        "resume": "Une analyse de 396 pratiques renversées montre que des pratiques courantes ont été contredites par des essais ultérieurs, malgré des recommandations initiales favorables."
+      },
+      "attendu": "T7",
+      "reponse_llm": "item: (voir item)\nthese: T7\ntype: contradiction\nscore: 5\npreuve: 396 pratiques renversées\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "Strong recommendation against arthroscopy for degenerative knee disease",
+        "doi": "10.1136/bmj.j1982",
+        "resume": "Une recommandation forte contre l'arthroscopie dans la maladie dégénérative du genou n'a été suivie que d'une décroissance lente de la pratique."
+      },
+      "attendu": "T7",
+      "reponse_llm": "item: (voir item)\nthese: T7\ntype: diffusion_sans_preuve\nscore: 3\npreuve: n'a été suivie que d'une décroissance lente de la pratique\nsauvetage_detecte: non"
+    },
+    {
+      "item": {
+        "titre": "Surgeon volume and operative outcomes in a national cohort",
+        "doi": "10.1000/volume.2024",
+        "resume": "Dans une cohorte nationale, les chirurgiens à fort volume opératoire obtiennent de meilleurs résultats postopératoires et moins de complications."
+      },
+      "attendu": "AUCUNE",
+      "reponse_llm": "RIEN"
+    },
+    {
+      "item": {
+        "titre": "High-fidelity simulation training for surgical residents",
+        "doi": "10.1000/simulation.2023",
+        "resume": "La formation par simulation haute fidélité améliore les compétences techniques des internes en chirurgie dans une étude observationnelle."
+      },
+      "attendu": "AUCUNE",
+      "reponse_llm": "RIEN"
+    },
+    {
+      "item": {
+        "titre": "Safety checklist adherence and perioperative mortality in high-income countries",
+        "doi": "10.1000/checklist.2022",
+        "resume": "Une revue systématique récente confirme que la checklist de sécurité réduit la mortalité périopératoire dans les pays à revenu élevé."
+      },
+      "attendu": "AUCUNE",
+      "reponse_llm": "RIEN"
+    }
+  ]
+}

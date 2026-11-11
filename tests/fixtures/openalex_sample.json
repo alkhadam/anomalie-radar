@@ -1,0 +1,29 @@
+{
+  "meta": {
+    "count": 2
+  },
+  "results": [
+    {
+      "id": "https://openalex.org/W123",
+      "doi": "https://doi.org/10.1000/xyz",
+      "display_name": "Trial A",
+      "abstract_inverted_index": {
+        "Sham": [
+          0
+        ],
+        "surgery": [
+          1
+        ],
+        "works": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "https://openalex.org/W456",
+      "doi": null,
+      "display_name": "Trial B",
+      "abstract_inverted_index": null
+    }
+  ]
+}

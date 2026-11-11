@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PubmedArticleSet>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID>11111111</PMID>
+      <Article>
+        <ArticleTitle>Arthroscopic meniscectomy versus sham surgery</ArticleTitle>
+        <Abstract>
+          <AbstractText Label="BACKGROUND">Sham surgery is a useful control.</AbstractText>
+          <AbstractText Label="RESULTS">No difference in pain was found.</AbstractText>
+        </Abstract>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <ArticleIdList>
+        <ArticleId IdType="doi">10.1056/NEJMoa1305189</ArticleId>
+        <ArticleId IdType="pubmed">11111111</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+  <PubmedArticle>
+    <MedlineCitation>
+      <PMID>22222222</PMID>
+      <Article>
+        <ArticleTitle>Checklist adherence and mortality</ArticleTitle>
+        <Abstract>
+          <AbstractText>Adoption obligatoire sans baisse significative.</AbstractText>
+        </Abstract>
+      </Article>
+    </MedlineCitation>
+    <PubmedData>
+      <ArticleIdList>
+        <ArticleId IdType="doi">10.1056/NEJMsa1402682</ArticleId>
+      </ArticleIdList>
+    </PubmedData>
+  </PubmedArticle>
+</PubmedArticleSet>
